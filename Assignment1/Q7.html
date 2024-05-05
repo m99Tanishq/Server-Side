@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<h1 style="color: red;" ALIGN="CENTER">Employee Registration Form</h1>
+<h1 style="color: blueviolet;" ALIGN="CENTER">Employee Registration Form</h1>
 
 <form action="submit_employee.php" method="post">
 <table border="0" align="center" style="width:100%">
@@ -44,11 +44,72 @@
 </tr>
 
 <tr> 
+  <td align="center">
+    <div style="text-align: center;">
+      <li>
+        <label for="state" style="font-size: 20px;">State:</label>
+      </li>
+    </div>
+  </td>
+  <td>
+    <select id="state" name="state" size="1">
+          <option value="">Gujarat</option>
+        </select>
+  </td>
+</tr>
+
+<tr> 
+<td align="center"><label for="zip" style="font-size: 20px;">Zip:</label></td>
+ <td> <input type="number" id="zip" name="zip"></tr>
+</tr>
+
+<tr>
+  <td align="center"><label for="photo" style="font-size: 20px;">Upload Photo:</label></td>
+  <td>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <input type="file" id="fileToUpload" name="fileToUpload">
+  </form>
+  </td>
+</tr>
+
+<tr>
+  <td align="center"><label for="email" style="font-size: 20px;">Email:</label></td>
+  <td> <input type="text" id="email" name="email"></tr>
+</tr>
+
+<tr> 
 <td style="font-size: 20px;" align="center"><label for="phone">Phone Number:</label></td>
   <td><input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="+91"></td>
 </tr>
 
-  <input type="submit" value="Submit">
+<tr>
+  <td align="center"><label for="language" style="font-size: 20px;">Languages Known:</label></td>
+  <td><div style="flex-direction: column;">
+    <input type="checkbox">Gujarati</input>
+    <br>
+    <input type="checkbox">Marathi</input>
+    <br>
+    <input type="checkbox">Hindi</input>
+  </div></td>
+
+  <tr>
+    <td align="center"><label for="addtional" style="font-size: 20px;">Additional Info</label></td>
+    <div style="flex-direction: columns;">
+    <td><textarea placeholder="Optional"></textarea>
+      <br>
+      <br>
+      <div style="">
+       <input type="submit" value="Submit">
+
+      <input type="reset" value="Reset"></div>
+     
+    </td>
+  </div>
+    
+
+  </td>
+  </tr>
+</tr>
 </form>
 
 </body>
